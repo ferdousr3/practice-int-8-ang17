@@ -1,10 +1,18 @@
-# HrManagment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+# Angular 17 Version compatibility
 
-## Development server
+1. Node.js v^18.13.0 || ^20.9.0 
+2. Typescript v>=4.9.3 <5.3.0
+3. Third item
+4. Fourth item
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+#### Schematics
+
+| Project | Package | Version | Links |
+|---|---|---|---|
+**Angular PWA Schematics** | [`@angular/pwa`](https://npmjs.com/package/@angular/pwa) | [![latest](https://img.shields.io/npm/v/%40angular%2Fpwa/latest.svg)](https://npmjs.com/package/@angular/pwa) |  [![snapshot](https://img.shields.io/badge/snapshot--blue.svg)](https://github.com/angular/angular-pwa-builds)
+**Angular Schematics** | [`@schematics/angular`](https://npmjs.com/package/@schematics/angular) | [![latest](https://img.shields.io/npm/v/%40schematics%2Fangular/latest.svg)](https://npmjs.com/package/@schematics/angular) |  [![snapshot](https://img.shields.io/badge/snapshot--blue.svg)](https://github.com/angular/schematics-angular-builds)
 
 ## Code scaffolding
 
