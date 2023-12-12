@@ -33,7 +33,7 @@ ng new demo
 ### For angular-17 
 <br/>
 
-> **_NOTE:_**  angular 17 default creates a stand-alone component, if we don't want standalone default  .
+> **_NOTE:_**  By default angular 17 create standalone component but if you don't want to create standalone component then execute the below command  .
  
 `ng new [project name] --standalone false`
 ```
