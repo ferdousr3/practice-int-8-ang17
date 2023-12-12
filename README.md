@@ -1,18 +1,22 @@
 
 # Angular 17 Version compatibility
 
-1. Node.js v^18.13.0 || ^20.9.0 
-2. Typescript v>=4.9.3 <5.3.0
-3. Third item
-4. Fourth item
-
-
-#### Schematics
 
 | Name | Version | Check Your Version | Official Links |
 |---|---|---|---|
 **Node.js** | `18.13.0 - 20.9.0 / @latest`| `node -v` |  [Node.js](https://nodejs.org/en)
-**Typescript** | `>=4.9.3 <5.3.0` | `tsc -v / tsc -h` |  [Typescript](https://www.typescriptlang.org/download)
+**Typescript** | `>=4.9.3 <5.3.0 / @latest` | `tsc -v / tsc -h` |  [Typescript](https://www.typescriptlang.org/download)
+
+## Install process of angular
+
+### 1. Angular CLI - The CLI tool for Angular.
+
+```
+npm i @angular/cli
+
+```
+
+
 
 ## Code scaffolding
 
