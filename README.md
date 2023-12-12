@@ -4,22 +4,41 @@
 | -------------- | ---------------------------- | ------------------ | ----------------------------------------------------- |
 | **Node.js**    | `18.13.0 - 20.9.0 / @latest` | `node -v`          | [Node.js](https://nodejs.org/en)                      |
 | **Typescript** | `>=4.9.3 <5.3.0 / @latest`   | `tsc -v / tsc -h`  | [Typescript](https://www.typescriptlang.org/download) |
+| **Npm** | ` @latest`   | `npm -v`  | [Npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
 
 ## Install process of angular
 
-### 1. Install nodejs and typescript .
+### 1. Install nodejs, typescript, npm .
 
-nodejs `18.13.0 - 20.9.0 / @latest`
-typescript `>=4.9.3 <5.3.0 / @latest`
+Nodejs `18.13.0 - 20.9.0 / @latest`
+<br/>
+
+Npm ` @latest`
+<br/>
+
+Typescript `>=4.9.3 <5.3.0 / @latest`
 
 ### 2. Angular CLI - The CLI tool for Angular(latest) .
 
 ```
 npm i @angular/cli
 ```
-### 3. Create angular Project .
+### 3. Create angular project .
 
-`ng new (project name)`
+`ng new [project name]`
+
+```
+ng new demo
+```
+### For angular-17 
+<br/>
+
+> **_NOTE:_**  angular 17 default creates a stand-alone component, if we don't want standalone default  .
+ 
+`ng new [project name] --standalone false`
+```
+ng new demo --standalone false
+```
 
 ### 4. Choose styling (css or scss by clicking keyboard up and down arrow key) .
 
@@ -41,6 +60,37 @@ ng serve --o
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+### Create component
+
+  `ng g c [component name]` 
+
+```
+ng g c home 
+```
+### Create module
+
+  `ng g m [module name]` 
+
+```
+ng g m home 
+```
+
+### Create module with routing module
+
+  `ng g m [module name] --routing` 
+
+```
+ng g m home --routing
+```
+### Create standalone component
+
+  `ng g c [module name] --standalone true` 
+
+```
+ng g c home --standalone true
+```
+
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
@@ -49,10 +99,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
