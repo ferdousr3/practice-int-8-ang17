@@ -9,10 +9,10 @@
 
 #### Schematics
 
-| Name | Version | Links |
-|---|---|---|
-**Node.js** | [`^18.13.0 || ^20.9.0`](https://npmjs.com/package/@angular/pwa) | [![latest](https://img.shields.io/npm/v/%40angular%2Fpwa/latest.svg)](https://npmjs.com/package/@angular/pwa) |  [![snapshot](https://img.shields.io/badge/snapshot--blue.svg)](https://github.com/angular/angular-pwa-builds)
-**Typescript** | [`@schematics/angular`](https://npmjs.com/package/@schematics/angular) | [![latest](https://img.shields.io/npm/v/%40schematics%2Fangular/latest.svg)](https://npmjs.com/package/@schematics/angular) |  [![snapshot](https://img.shields.io/badge/snapshot--blue.svg)](https://github.com/angular/schematics-angular-builds)
+| Name | Version | Check Your Version | Official Links |
+|---|---|---|---|
+**Node.js** | `18.13.0 - 20.9.0 / @latest`| `node -v` |  [Node.js](https://nodejs.org/en)
+**Typescript** | `>=4.9.3 <5.3.0` | `tsc -v / tsc -h` |  [Typescript](https://www.typescriptlang.org/download)
 
 ## Code scaffolding
 
