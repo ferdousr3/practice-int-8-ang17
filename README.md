@@ -99,5 +99,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Class Slider
+
+Run `Slider` to execute the unit tests via [Slider](https://docs.google.com/presentation/d/1I3O-rpedN2UBuAt-Ubiv1eKmS0lQbuBNphOzBHAQj7c/edit?usp=sharing).
+
 
 
