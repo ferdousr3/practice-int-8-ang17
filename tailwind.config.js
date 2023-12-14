@@ -13,6 +13,10 @@ module.exports = {
           DEFAULT: "max-w-xl",
         },
       },
+      containerfluid: {
+        center: true,
+        padding: ".5rem",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
