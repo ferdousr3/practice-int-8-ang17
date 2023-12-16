@@ -13,5 +13,13 @@ export class HeaderRoutes {
       title: PublicRoutes.contactRoute.title,
       path: PublicRoutes.contactRoute.path,
     },
+    {
+      title: PublicRoutes.oneWayBindRoute.title,
+      path: PublicRoutes.oneWayBindRoute.path,
+    },
+    {
+      title: PublicRoutes.twoWayBindRoute.title,
+      path: PublicRoutes.twoWayBindRoute.path,
+    },
   ];
 }
