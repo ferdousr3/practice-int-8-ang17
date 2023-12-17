@@ -20,4 +20,8 @@ export class PublicRoutes {
     title: 'Two Way bind',
     path: 'Two-way-bind',
   };
+  public static readonly courseCardRoute: IRoute = {
+    title: 'Card',
+    path: 'course-card',
+  };
 }

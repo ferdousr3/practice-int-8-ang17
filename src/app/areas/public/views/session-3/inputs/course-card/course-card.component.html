@@ -1,0 +1,33 @@
+<div class="grid grid-cols-3 gap-4">
+   @for(course of allCourses ; track course.id){
+
+   <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+         <img class="rounded-t-lg h-40 w-full" src={{course.img}} alt="" />
+      </a>
+      <div class="p-5">
+         <a href="#">
+            <h5 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">{{course.courseName}}
+            </h5>
+         </a>
+         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{course.courseDetails.slice(0,70)}}</p>
+         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Price:${{course.price}}</p>
+         <!-- <button [disabled]="!course.isRegistration"
+               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-sm disabled:bg-gray-700">
+               Registration
+            </button> -->
+         @if(course.isRegistration){
+         <button [disabled]="!course.isRegistration"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-sm disabled:bg-gray-700">
+            Registration
+         </button>
+         } @else {
+         <span class="bg-yellow-50 text-yellow-800 p-2">Registration Closed</span>
+         }
+      </div>
+   </div>
+   }
+
+   <button (click)="btnClick()">Pass data from child</button>
+   
+</div>

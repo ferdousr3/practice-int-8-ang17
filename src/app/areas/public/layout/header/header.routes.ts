@@ -21,5 +21,9 @@ export class HeaderRoutes {
       title: PublicRoutes.twoWayBindRoute.title,
       path: PublicRoutes.twoWayBindRoute.path,
     },
+    {
+      title: PublicRoutes.courseCardRoute.title,
+      path: PublicRoutes.courseCardRoute.path,
+    },
   ];
 }

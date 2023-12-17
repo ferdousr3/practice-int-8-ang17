@@ -101,7 +101,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Class Slider
 
-Run `Slider` to execute the unit tests via [Slider](https://docs.google.com/presentation/d/1I3O-rpedN2UBuAt-Ubiv1eKmS0lQbuBNphOzBHAQj7c/edit?usp=sharing).
+ `Slider` to execute the unit tests via [Slider](https://docs.google.com/presentation/d/1I3O-rpedN2UBuAt-Ubiv1eKmS0lQbuBNphOzBHAQj7c/edit?usp=sharing).
+
+ `session-3 slide` to execute the unit tests via [session-3](https://docs.google.com/presentation/d/1Owm_YznRqSKm689pRjfjv3iXG4fL0C2PkMbAb9TLQcc/edit?usp=sharing).
 
 
 
