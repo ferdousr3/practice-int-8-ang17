@@ -1,6 +1,6 @@
 export enum AppRoutes {
   Admin = 'admin',
   Public = '',
-  Developer= 'developer'
- 
+  Developer = 'developer',
+  Sessions = 'sessions',
 }

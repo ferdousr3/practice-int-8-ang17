@@ -33,6 +33,7 @@ const routes: Routes = [
     title: PublicRoutes.courseCardRoute.title,
     component: CoursesComponent,
   },
+  
 ];
 
 @NgModule({

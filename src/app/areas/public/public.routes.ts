@@ -24,4 +24,5 @@ export class PublicRoutes {
     title: 'Card',
     path: 'course-card',
   };
+  
 }

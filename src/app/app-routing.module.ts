@@ -5,6 +5,7 @@ import { AdminComponent } from './areas/admin/admin.component';
 import { DeveloperComponent } from './areas/developer/developer.component';
 import { PublicComponent } from './areas/public/public.component';
 import { PageNotFoundComponent } from './areas/public/views/page-not-found/page-not-found.component';
+import { SessionsComponent } from './areas/sessions/sessions.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,12 @@ const routes: Routes = [
       import('./areas/developer/developer.module').then(
         (m) => m.DeveloperModule
       ),
+  },
+  {
+    path: AppRoutes.Sessions,
+    component: SessionsComponent,
+    loadChildren: () =>
+      import('./areas/sessions/sessions.module').then((m) => m.SessionsModule),
   },
   {
     path: '**',
