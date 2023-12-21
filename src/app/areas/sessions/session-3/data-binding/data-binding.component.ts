@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ICourse, SessionThreeData } from '../sessionThreeData';
 import { CourseCardComponent } from '../inputs/course-card/course-card.component';
+import { PageSectionTitleComponent } from '../../../../shared/component/page-section-title/page-section-title.component';
 
 @Component({
   selector: 'app-data-binding',
   standalone: true,
-  imports: [CourseCardComponent],
+  imports: [CourseCardComponent,PageSectionTitleComponent],
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.css',
 })
