@@ -11,7 +11,7 @@ export class SidebarData {
   public static readonly SidebarRoutes: ISidebarRoute[] = [
     {
       id: 1,
-      title: 'Session-3',
+      title: 'session three',
       routes: [
         {
           routeTitle: 'Data Binding',
@@ -29,7 +29,7 @@ export class SidebarData {
     },
     {
       id: 2,
-      title: 'Session-4',
+      title: 'session four',
       routes: [
         {
           routeTitle: 'Data Binding',

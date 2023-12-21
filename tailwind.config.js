@@ -7,10 +7,10 @@ module.exports = {
         center: true,
         padding: "1.5rem",
         screens: {
-          xl: "1280px",
+          xl: "1400px",
         },
         maxWidth: {
-          DEFAULT: "max-w-xl",
+          DEFAULT: "max-w-xxl",
         },
       },
       containerfluid: {

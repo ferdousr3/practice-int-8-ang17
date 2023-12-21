@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ISidebarRoute, SidebarData } from './sidebara.routesData';
 import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'session-sidebar',
   standalone: true,
-  imports: [RouterLink, NgClass],
+  imports: [RouterLink, NgClass,RouterLinkActive],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })

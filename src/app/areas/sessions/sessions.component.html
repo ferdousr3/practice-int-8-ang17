@@ -1,12 +1,11 @@
-<session-header />
-
 <div class="grid grid-cols-12">
-<div class="col-span-2">
-   <session-sidebar/>
-</div>
-<div class="col-span-10">
-   <div class="container">
-      asas
+   <div class="col-span-2">
+      <session-sidebar />
    </div>
-</div>
+   <div class="col-span-10">
+      <session-header />
+      <div class="container py-4">
+         <router-outlet></router-outlet>
+      </div>
+   </div>
 </div>
