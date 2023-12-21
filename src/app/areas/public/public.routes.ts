@@ -4,17 +4,6 @@ export interface IRoute {
 }
 
 export class PublicRoutes {
-  //   public static readonly routes:IRoute = {
-  //    {
-  //       title:'Home',
-  //       path:''
-  //    },
-
-  // {
-  //    title:'Contact',
-  //    path:'contact',
-  // }
-  //   };
   public static readonly homeRoute: IRoute = {
     title: 'Home',
     path: '',
@@ -23,4 +12,17 @@ export class PublicRoutes {
     title: 'Contact',
     path: 'contact',
   };
+  public static readonly oneWayBindRoute: IRoute = {
+    title: 'Data bind',
+    path: 'one-way-bind',
+  };
+  public static readonly twoWayBindRoute: IRoute = {
+    title: 'Two Way bind',
+    path: 'Two-way-bind',
+  };
+  public static readonly courseCardRoute: IRoute = {
+    title: 'Card',
+    path: 'course-card',
+  };
+  
 }

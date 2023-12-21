@@ -1,0 +1,22 @@
+<div class="shadow-sm min-h-[100vh] bg-gray-800 text-gray-300 sticky top-0">
+  <div class="pl-6 pt-6 sticky top-0">
+    <span class="text-gray-300 mb-8 block">Dev Skill</span>
+    @for(route of sidebarRoutes; track route.id ){
+    <div class="mb-3 ">
+      <span (click)="openSubmenu(route.id)" class="mb-2 text-sm font-normal flex items-center cursor-pointer text-gray-300/75">
+        <i class="bi bi-check2-circle mr-2"></i> {{ route.title }}
+      </span>
+      <ul class="max-w-md ml-6 text-gray-500 list-none list-inside dark:text-gray-400 mt-2"
+        [ngClass]="isSubmenuOpen ? 'block' : 'hidden'">
+        @for (routeDetails of route.routes ; track routeDetails.routeTitle ){
+        <li>
+          <a class="text-xs  pb-2 text-gray-300/75" [routerLink]="routeDetails.routePath" [routerLinkActive]="'text-gray-100'">
+            {{ routeDetails.routeTitle }}
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+</div>

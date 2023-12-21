@@ -14,10 +14,7 @@ export class PublicHeaderComponent {
   public headerRoutes: IHeaderRoute[] = HeaderRoutes.Routes;
   isOpenMenu: boolean = true;
 
-  constructor() {
-    
-    
-  }
+  constructor() {}
 
   openMenuHandler() {
     this.isOpenMenu = !this.isOpenMenu;

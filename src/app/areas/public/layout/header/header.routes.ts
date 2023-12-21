@@ -1,4 +1,6 @@
+import { AppRoutes } from '../../../../app.routes';
 import { PublicRoutes } from '../../public.routes';
+
 export interface IHeaderRoute {
   title: string;
   path: string;
@@ -10,8 +12,8 @@ export class HeaderRoutes {
       path: PublicRoutes.homeRoute.path,
     },
     {
-      title: PublicRoutes.contactRoute.title,
-      path: PublicRoutes.contactRoute.path,
+      title: AppRoutes.Sessions,
+      path: AppRoutes.Sessions,
     },
   ];
 }
