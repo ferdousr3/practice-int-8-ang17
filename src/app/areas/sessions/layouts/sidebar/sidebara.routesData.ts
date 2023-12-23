@@ -32,8 +32,12 @@ export class SidebarData {
       title: 'session four',
       routes: [
         {
-          routeTitle: 'Data Binding',
-          routePath: 'one-way-bind',
+          routeTitle: 'Template-Ref-Var',
+          routePath: 'template-ref-va',
+        },
+        {
+          routeTitle: 'view child & children',
+          routePath: 'view-child-children',
         },
       ],
     },
