@@ -39,6 +39,10 @@ export class SidebarData {
           routeTitle: 'view child & children',
           routePath: 'view-child-children',
         },
+        {
+          routeTitle: 'Services',
+          routePath: 'all-services',
+        },
       ],
     },
   ];
