@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-view-child-con',
@@ -7,15 +7,19 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   templateUrl: './view-child-con.component.html',
   styleUrl: './view-child-con.component.css',
 })
-export class ViewChildConComponent implements OnInit {
+export class ViewChildConComponent implements OnInit, AfterViewInit {
   newEmailId: string = '';
-  @ViewChild('emails', { static: false }) emailId: ElementRef | undefined;
+  @ViewChild('emails', { static: false }) emailId!: ElementRef;
+
+  ngOnInit(): void {
+    // this.updateEmailId();
+  }
+  ngAfterViewInit(): void {
+     this.updateEmailId();
+  }
 
   updateEmailId() {
     this.newEmailId = this.emailId?.nativeElement.value;
     console.log(this.newEmailId);
-  }
-  ngOnInit(): void {
-    this.updateEmailId();
   }
 }

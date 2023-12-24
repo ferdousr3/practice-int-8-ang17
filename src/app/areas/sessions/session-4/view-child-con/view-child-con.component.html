@@ -1,19 +1,17 @@
 <div>
+  <p class="mb-5">
+    ViewChild is useful for establishing communication between parent and child components, allowing the parent
+    to interact with and manipulate the child's properties, methods, or DOM elements.
+  </p>
   <p class="mb-4">{{ newEmailId }}</p>
   <div class="pt-8">
     <div class="sm:col-span-4">
-      <label
-        for="email"
-        class="block text-sm font-medium leading-6 text-gray-900"
-      >
+      <label for="email" class="block text-sm font-medium leading-6 text-gray-900">
         Email address
       </label>
       <div class="mt-2 flex">
-        <input
-          #emails
-          autocomplete="email"
-          class="block w-[400px] ps-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        />
+        <input (input)="updateEmailId()" #emails autocomplete="email"
+          class="block w-[400px] ps-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
     </div>
   </div>

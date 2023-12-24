@@ -6,6 +6,7 @@ import { CoursesComponent } from './session-3/inputs/courses/courses.component';
 import { TwoWayBindingComponent } from './session-3/two-way-binding/two-way-binding.component';
 import { AllServicesComponent } from './session-4/all-services/all-services.component';
 import { TemplateRefVaComponent } from './session-4/template-ref-va/template-ref-va.component';
+import { UseCssComponent } from './session-4/use-css/use-css.component';
 import { ViewChildConComponent } from './session-4/view-child-con/view-child-con.component';
 
 const routes: Routes = [
@@ -43,6 +44,11 @@ const routes: Routes = [
     path: 'all-services',
     title: 'Services',
     component: AllServicesComponent,
+  },
+  {
+    path: 'css',
+    title: 'css',
+    component: UseCssComponent,
   },
 ];
 
