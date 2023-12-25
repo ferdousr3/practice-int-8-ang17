@@ -8,6 +8,8 @@ import { AllServicesComponent } from './session-4/all-services/all-services.comp
 import { TemplateRefVaComponent } from './session-4/template-ref-va/template-ref-va.component';
 import { UseCssComponent } from './session-4/use-css/use-css.component';
 import { ViewChildConComponent } from './session-4/view-child-con/view-child-con.component';
+import { FormsTypesComponent } from './session-5/forms-types/forms-types.component';
+import { ReactiveFormsComponent } from './session-5/reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   {
@@ -49,6 +51,16 @@ const routes: Routes = [
     path: 'css',
     title: 'css',
     component: UseCssComponent,
+  },
+  {
+    path: 'reactive-forms',
+    title: 'Reactive forms',
+    component: ReactiveFormsComponent,
+  },
+  {
+    path: 'forms-types',
+    title: 'Forms Types',
+    component: FormsTypesComponent,
   },
 ];
 

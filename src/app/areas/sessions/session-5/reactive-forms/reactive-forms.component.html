@@ -1,0 +1,120 @@
+<div class="bg-slate-50 m-4 border p-8 max-w-2xl mx-auto">
+  <form
+    class="grid grid-cols-12 gap-4"
+    [formGroup]="registrationForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="col-span-6">
+      <label for="email" class="form-label"> First Name </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="first name"
+        formControlName="firstName"
+      />
+    </div>
+    <div class="col-span-6">
+      <label for="email" class="form-label"> Last Name </label>
+      <input type="text" class="form-control" placeholder="last name"  formControlName="lastName"/>
+    </div>
+    <div class="col-span-6">
+      <label for="email" class="form-label">Email </label>
+      <input type="email" class="form-control" placeholder="name@mail.com" formControlName="email"/>
+    </div>
+    <div class="col-span-6">
+      <label for="email" class="form-label"> Date of birth </label>
+      <input type="date" class="form-control" placeholder="name@mail.com" formControlName="dob" />
+    </div>
+    <div class="col-span-6">
+      <label for="email" class="form-label"> User Name </label>
+      <input type="text" class="form-control" placeholder="user name" formControlName="userName" />
+    </div>
+    <div class="col-span-6">
+      <button type="button" class="gn-btn w-full mt-6">
+        Generate User Name
+      </button>
+    </div>
+    <div class="col-span-12">
+      <label for="email" class="form-label"> Gender</label>
+      <div class="flex mt-3">
+        <div class="flex items-center mr-4">
+          <input
+            type="radio"
+            value="male"
+            class="radio-btn"
+            formControlName="gender"
+          />
+          <label
+            for="country-option-1"
+            class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            Male
+          </label>
+        </div>
+        <div class="flex items-center mr-4">
+          <input
+            type="radio"
+            value="female"
+            class="radio-btn"
+            formControlName="gender"
+          />
+          <label
+            for="country-option-2"
+            class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            Female
+          </label>
+        </div>
+        <div class="flex items-center mr-4">
+          <input
+            type="radio"
+            value="other"
+            class="radio-btn"
+            formControlName="gender"
+          />
+          <label
+            for="country-option-3"
+            class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            Other
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-6">
+      <label for="email" class="form-label"> Country </label>
+      <select class="select" formControlName="country">
+        <option value="bangladesh">Bangladesh</option>
+        <option value="united states">United States</option>
+        <option value="canada">Canada</option>
+        <option value="france">France</option>
+      </select>
+    </div>
+    <div class="col-span-6">
+      <label for="email" class="form-label"> City </label>
+      <input type="text" class="form-control" placeholder="city" formControlName="city" />
+    </div>
+    <div class="col-span-12 mt-3">
+      <div class="flex items-center mb-4">
+        <input
+          formControlName="terms"
+          id="checkbox-1"
+          type="checkbox"
+          value="terms"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+        />
+        <label
+          for="checkbox-1"
+          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >I agree to the
+          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"
+            >terms and conditions</a
+          >.</label
+        >
+      </div>
+    </div>
+    <div class="col-span-12 mt-4">
+      <button type="submit" class="btn w-full">Submit</button>
+    </div>
+  </form>
+</div>

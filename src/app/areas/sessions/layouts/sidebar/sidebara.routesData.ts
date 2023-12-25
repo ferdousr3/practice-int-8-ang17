@@ -45,7 +45,21 @@ export class SidebarData {
         },
         {
           routePath: 'css',
-          routeTitle:'css',
+          routeTitle: 'css',
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: 'session five',
+      routes: [
+        {
+          routeTitle: 'Forms types',
+          routePath: 'forms-types',
+        },
+        {
+          routeTitle: 'Reactive Forms',
+          routePath: 'reactive-forms',
         },
       ],
     },
