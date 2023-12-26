@@ -1,29 +1,49 @@
-<div class="bg-slate-50 m-4 border p-8 max-w-2xl mx-auto">
-  <form
-    class="grid grid-cols-12 gap-4"
-    [formGroup]="registrationForm"
-    (ngSubmit)="onSubmit()"
-  >
+<div class="bg-slate-50 m-4 border p-8 max-w-2xl mx-auto rounded-md">
+  <form class="grid grid-cols-12 gap-4" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="col-span-6">
       <label for="email" class="form-label"> First Name </label>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="first name"
-        formControlName="firstName"
-      />
+      <input type="text" class="form-control" placeholder="first name" formControlName="firstName" />
+      <small class="mt-2 text-rose-500">
+        @if(firstName?.invalid && firstName?.dirty){
+        @if(firstName?.errors?.['required']){
+        <span>First Name is required</span>
+        } @else if(firstName?.errors?.['minlength']){
+        <span class="block text-rose-500">First Name min is 4</span>
+        } @else if(firstName?.errors?.['maxlength']){
+        <span>First Name max is 6</span>}
+        }
+      </small>
     </div>
     <div class="col-span-6">
       <label for="email" class="form-label"> Last Name </label>
-      <input type="text" class="form-control" placeholder="last name"  formControlName="lastName"/>
+      <input type="text" class="form-control" placeholder="last name" formControlName="lastName" />
+      <small class="mt-2 text-rose-500">
+        @if(lastName?.invalid && (lastName?.touched || lastName?.dirty)){
+        @if(lastName?.errors?.['required']){
+        <span>Last Name is required</span>
+        } @else if(lastName?.errors?.['minlength']){
+        <span class="block text-rose-500">Last Name min is 4</span>
+        } @else if(lastName?.errors?.['maxlength']){
+        <span>Last Name min is 6</span>}
+        }
+      </small>
     </div>
     <div class="col-span-6">
       <label for="email" class="form-label">Email </label>
-      <input type="email" class="form-control" placeholder="name@mail.com" formControlName="email"/>
+      <input type="email" class="form-control" placeholder="name@mail.com" formControlName="email" />
+      <small class="mt-2 text-rose-500">
+        @if( email?.invalid && email?.dirty){
+        @if(email?.errors?.['required']){
+        <span>Email is required</span>
+        } @else if(email?.errors?.['email']){
+        <span>please enter a valid mail</span>
+        }
+        }
+      </small>
     </div>
     <div class="col-span-6">
       <label for="email" class="form-label"> Date of birth </label>
-      <input type="date" class="form-control" placeholder="name@mail.com" formControlName="dob" />
+      <input type="date" class="form-control" placeholder="dd/mm/yyyy" formControlName="dob" />
     </div>
     <div class="col-span-6">
       <label for="email" class="form-label"> User Name </label>
@@ -38,44 +58,20 @@
       <label for="email" class="form-label"> Gender</label>
       <div class="flex mt-3">
         <div class="flex items-center mr-4">
-          <input
-            type="radio"
-            value="male"
-            class="radio-btn"
-            formControlName="gender"
-          />
-          <label
-            for="country-option-1"
-            class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
+          <input type="radio" value="male" class="radio-btn" formControlName="gender" />
+          <label for="country-option-1" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
             Male
           </label>
         </div>
         <div class="flex items-center mr-4">
-          <input
-            type="radio"
-            value="female"
-            class="radio-btn"
-            formControlName="gender"
-          />
-          <label
-            for="country-option-2"
-            class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
+          <input type="radio" value="female" class="radio-btn" formControlName="gender" />
+          <label for="country-option-2" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
             Female
           </label>
         </div>
         <div class="flex items-center mr-4">
-          <input
-            type="radio"
-            value="other"
-            class="radio-btn"
-            formControlName="gender"
-          />
-          <label
-            for="country-option-3"
-            class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
+          <input type="radio" value="other" class="radio-btn" formControlName="gender" />
+          <label for="country-option-3" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
             Other
           </label>
         </div>
@@ -96,21 +92,17 @@
     </div>
     <div class="col-span-12 mt-3">
       <div class="flex items-center mb-4">
-        <input
-          formControlName="terms"
-          id="checkbox-1"
-          type="checkbox"
-          value="terms"
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-        />
-        <label
-          for="checkbox-1"
-          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >I agree to the
-          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"
-            >terms and conditions</a
-          >.</label
-        >
+        <input formControlName="terms" id="checkbox-1" type="checkbox"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" />
+        <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree to the
+          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+        <small class="mt-2 text-rose-500">
+          @if( terms?.invalid && (terms?.touched || terms?.dirty)){
+          @if(terms?.errors?.['required']){
+          <span>Please accept our terms and condition</span>
+          }
+          }
+        </small>
       </div>
     </div>
     <div class="col-span-12 mt-4">
