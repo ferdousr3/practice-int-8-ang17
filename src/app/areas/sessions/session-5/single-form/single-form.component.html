@@ -1,0 +1,38 @@
+<div class="bg-slate-50 m-4 border p-8 max-w-2xl mx-auto rounded-md">
+   <form [formGroup]="singleForm" (ngSubmit)="onSubmit()">
+      <label for="email" class="form-label"> First Name </label>
+      <input type="text" class="form-control" placeholder="first name" formControlName="firstName" />
+      <small class="mt-2 text-rose-500">
+         @if(firstName?.invalid && ( firstName?.touched || firstName?.dirty)){
+         @if(firstName?.errors?.['required']){
+         <span>First Name is required</span>
+         } @else if(firstName?.errors?.['minlength']){
+         <span class="block text-rose-500">First Name min is 4</span>
+         } @else if(firstName?.errors?.['maxlength']){
+         <span>First Name max is 6</span>}
+         @else if(firstName?.errors?.['noSpaceAllow']){
+         <span>First Name no space allow</span>}
+         }
+      </small>
+
+      <label for="email" class="form-label"> last Name </label>
+      <input type="text" class="form-control" placeholder="first name" formControlName="lastName" />
+      <small class="mt-2 text-rose-500">
+         @if(lastName?.invalid && lastName?.dirty){
+         @if(lastName?.errors?.['required']){
+         <span>last Name is required</span>
+         } @else if(lastName?.errors?.['minlength']){
+         <span class="block text-rose-500">last Name min is 4</span>
+         } @else if(lastName?.errors?.['maxlength']){
+         <span>last Name max is 6</span>}
+         @else if(lastName?.errors?.['noSpaceAllow']){
+         <span>last Name no space allow</span>}
+         }
+      </small>
+      <div class="col-span-12 mt-4">
+         <button type="submit" class="btn w-full">
+            Submit
+         </button>
+      </div>
+   </form>
+</div>

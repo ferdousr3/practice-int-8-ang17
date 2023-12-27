@@ -61,6 +61,10 @@ export class SidebarData {
           routeTitle: 'Reactive Forms',
           routePath: 'reactive-forms',
         },
+        {
+          routeTitle: 'Single Form',
+          routePath: 'single-form',
+        },
       ],
     },
   ];

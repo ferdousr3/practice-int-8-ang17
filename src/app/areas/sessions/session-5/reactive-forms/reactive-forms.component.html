@@ -10,10 +10,10 @@
         } @else if(firstName?.errors?.['minlength']){
         <span class="block text-rose-500">First Name min is 4</span>
         } @else if(firstName?.errors?.['maxlength']){
-        <span>First Name max is 6</span>} 
-         <!-- @else if(firstName?.errors?.['noSpaceAllow']){
+        <span>First Name max is 6</span>}
+        <!-- @else if(firstName?.errors?.['noSpaceAllow']){
         <span>First Name no space allow</span>}  -->
-      }
+        }
       </small>
     </div>
     <div class="col-span-6">
@@ -53,10 +53,11 @@
       <label for="email" class="form-label"> User Name </label>
       <input type="text" class="form-control" placeholder="user name" formControlName="userName" />
       <small class="mt-2 text-rose-500">
-        @if( userName?.invalid && userName?.dirty){ @if(userName?.errors?.['required']){
-        <span>Email is required</span>
-        } @else if(userName?.errors?.['minlength']){
-        <span>user name min 5</span>
+        @if( userName?.invalid && userName?.dirty)
+        { @if(userName?.errors?.['required']){
+        <span>User Name is required</span>
+        } @else if(userName?.errors?.['checkUsername']){
+        <span>user name in no invalid</span>
         }}
       </small>
     </div>

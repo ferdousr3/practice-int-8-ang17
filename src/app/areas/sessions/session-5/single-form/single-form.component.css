@@ -26,7 +26,6 @@ button[disabled] {
   @apply bg-blue-400 hover:bg-blue-500;
 }
 
-
 /* input.ng-invalid.ng-touched{
   border: red 2px solid;
 }

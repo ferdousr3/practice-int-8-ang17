@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormArray,
   FormBuilder,
@@ -17,7 +17,7 @@ import { noSpaceAllow } from './noSpaceAllow.validator';
   templateUrl: './reactive-forms.component.html',
   styleUrl: './reactive-forms.component.css',
 })
-export class ReactiveFormsComponent {
+export class ReactiveFormsComponent implements OnInit {
   constructor(private _fromBuilder: FormBuilder) {}
 
   registrationForm = this._fromBuilder.group({
@@ -35,7 +35,7 @@ export class ReactiveFormsComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
     userName: new FormControl('', [
       Validators.required,
-      Validators.minLength(5),
+      Validators.minLength(3),
     ]),
     dob: new FormControl('', [Validators.required, Validators.minLength(5)]),
     gender: new FormControl('male', [Validators.required]),
@@ -45,11 +45,17 @@ export class ReactiveFormsComponent {
     }),
     skills: new FormArray([
       new FormControl('', Validators.required),
-      // new FormControl('', Validators.required),
-      // new FormControl('', Validators.required),
+      new FormControl('', Validators.required),
+      new FormControl('', Validators.required),
     ]),
     terms: new FormControl('', [Validators.required, Validators.requiredTrue]),
   });
+
+  ngOnInit(): void {
+    this.registrationForm.get('firstName')?.valueChanges.subscribe((value) => {
+      console.log(value);
+    });
+  }
 
   get firstName() {
     return this.registrationForm.get('firstName');
@@ -104,4 +110,6 @@ export class ReactiveFormsComponent {
       control.removeAt(idx);
     }
   }
+
+  
 }
