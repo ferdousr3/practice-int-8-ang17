@@ -10,8 +10,10 @@
         } @else if(firstName?.errors?.['minlength']){
         <span class="block text-rose-500">First Name min is 4</span>
         } @else if(firstName?.errors?.['maxlength']){
-        <span>First Name max is 6</span>}
-        }
+        <span>First Name max is 6</span>} 
+         <!-- @else if(firstName?.errors?.['noSpaceAllow']){
+        <span>First Name no space allow</span>}  -->
+      }
       </small>
     </div>
     <div class="col-span-6">
@@ -24,30 +26,39 @@
         } @else if(lastName?.errors?.['minlength']){
         <span class="block text-rose-500">Last Name min is 4</span>
         } @else if(lastName?.errors?.['maxlength']){
-        <span>Last Name min is 6</span>}
-        }
+        <span>Last Name min is 6</span>} }
       </small>
     </div>
     <div class="col-span-6">
       <label for="email" class="form-label">Email </label>
       <input type="email" class="form-control" placeholder="name@mail.com" formControlName="email" />
       <small class="mt-2 text-rose-500">
-        @if( email?.invalid && email?.dirty){
-        @if(email?.errors?.['required']){
+        @if( email?.invalid && email?.dirty){ @if(email?.errors?.['required']){
         <span>Email is required</span>
         } @else if(email?.errors?.['email']){
         <span>please enter a valid mail</span>
-        }
-        }
+        }}
       </small>
     </div>
     <div class="col-span-6">
       <label for="email" class="form-label"> Date of birth </label>
       <input type="date" class="form-control" placeholder="dd/mm/yyyy" formControlName="dob" />
+      <small class="mt-2 text-rose-500">
+        @if(dob?.invalid && dob?.dirty){ @if(dob?.errors?.['required']){
+        <span>Dob is required</span>
+        }}
+      </small>
     </div>
     <div class="col-span-6">
       <label for="email" class="form-label"> User Name </label>
       <input type="text" class="form-control" placeholder="user name" formControlName="userName" />
+      <small class="mt-2 text-rose-500">
+        @if( userName?.invalid && userName?.dirty){ @if(userName?.errors?.['required']){
+        <span>Email is required</span>
+        } @else if(userName?.errors?.['minlength']){
+        <span>user name min 5</span>
+        }}
+      </small>
     </div>
     <div class="col-span-6">
       <button type="button" class="gn-btn w-full mt-6">
@@ -77,36 +88,79 @@
         </div>
       </div>
     </div>
-    <div class="col-span-6">
-      <label for="email" class="form-label"> Country </label>
-      <select class="select" formControlName="country">
-        <option value="bangladesh">Bangladesh</option>
-        <option value="united states">United States</option>
-        <option value="canada">Canada</option>
-        <option value="france">France</option>
-      </select>
-    </div>
-    <div class="col-span-6">
-      <label for="email" class="form-label"> City </label>
-      <input type="text" class="form-control" placeholder="city" formControlName="city" />
-    </div>
-    <div class="col-span-12 mt-3">
-      <div class="flex items-center mb-4">
-        <input formControlName="terms" id="checkbox-1" type="checkbox"
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" />
-        <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree to the
-          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+    <div class="col-span-12 grid grid-cols-12 gap-4 " formGroupName="address">
+      <div class="col-span-6">
+        <label for="email" class="form-label"> Country </label>
+        <select class="select" formControlName="country">
+          <option value="bangladesh">Bangladesh</option>
+          <option value="united states">United States</option>
+          <option value="canada">Canada</option>
+          <option value="france">France</option>
+        </select>
+      </div>
+      <div class="col-span-6">
+        <label for="email" class="form-label"> City </label>
+        <input type="text" class="form-control" placeholder="city" formControlName="city" />
         <small class="mt-2 text-rose-500">
-          @if( terms?.invalid && (terms?.touched || terms?.dirty)){
-          @if(terms?.errors?.['required']){
-          <span>Please accept our terms and condition</span>
-          }
-          }
+          @if(city?.invalid && city?.dirty){ @if(city?.errors?.['required']){
+          <span>City is required</span>
+          }}
         </small>
       </div>
     </div>
+    <label for="skils" class="form-label"> Skills</label>
+    <!-- <div class="col-span-12 grid grid-cols-12 gap-4" formArrayName="skills">
+      @for(skill of skills; track skill ; let idx = $index){
+      <div class="col-span-3">
+        <input type="text" class="form-control  block" placeholder="skill" [formControlName]="idx">
+        <small class="mt-2 text-rose-500 block">
+          @if(skill?.invalid && skill?.dirty){ @if(skill?.errors?.['required']){
+          <span>{{idx+1}} skill is required</span>
+          }}
+        </small>
+      </div>
+      }
+    </div> -->
+    <div class="col-span-12 grid grid-cols-12 gap-4" formArrayName="skills">
+      @for(skill of skills; track skill ; let idx = $index){
+      <div class="col-span-12">
+        <div class="flex">
+          <div class="w-[80%] mr-4">
+            <input type="text" class="form-control  block" placeholder="skill" [formControlName]="idx">
+            <small class="mt-2 text-rose-500 block">
+              @if(skill?.invalid && skill?.dirty){ @if(skill?.errors?.['required']){
+              <span>skill is required</span>
+              }}
+            </small>
+
+          </div>
+          <button type="button" (click)="removeSkill(idx)"
+            class="w-[19%]  text-xs bg-red-700 border border-red-700 text-white rounded-md px-3 py-1 h-[2.3rem]">Delete</button>
+        </div>
+      </div>
+      }
+      <button type="button" (click)="addSkills()"
+        class="col-span-2 text-xs bg-violet-700 border border-violet-700 text-white rounded-md px-3 py-2 w-full">Add</button>
+    </div>
+    <div class="col-span-12 mt-3">
+      <div class="flex  items-center mb-1">
+        <input formControlName="terms" id="checkbox-1" type="checkbox"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" />
+        <label for="checkbox-1" class=" ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 block">I agree to the
+          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.
+        </label>
+      </div>
+      <small class="mt-1 text-rose-500 block">
+        @if( terms?.invalid && (terms?.touched || terms?.dirty)){
+        @if(terms?.errors?.['required']){
+        <span>Please accept our terms and condition</span>
+        } }
+      </small>
+    </div>
     <div class="col-span-12 mt-4">
-      <button type="submit" class="btn w-full">Submit</button>
+      <button type="submit" class="btn w-full" [disabled]="isValid()">
+        Submit
+      </button>
     </div>
   </form>
 </div>
