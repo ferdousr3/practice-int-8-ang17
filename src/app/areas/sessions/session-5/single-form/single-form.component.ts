@@ -5,7 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { noSpaceAllow } from '../reactive-forms/noSpaceAllow.validator';
+import { CustomValidators } from '../reactive-forms/validators/customValidators';
 
 @Component({
   selector: 'app-single-form',
@@ -21,12 +21,12 @@ export class SingleFormComponent {
     firstName: new FormControl('', [
       Validators.required,
       Validators.minLength(4),
-      noSpaceAllow,
+      CustomValidators.noSpaceAllow,
     ]),
     lastName: new FormControl('', [
       Validators.required,
       Validators.maxLength(6),
-      Validators.minLength(5)
+      Validators.minLength(5),
     ]),
   });
 

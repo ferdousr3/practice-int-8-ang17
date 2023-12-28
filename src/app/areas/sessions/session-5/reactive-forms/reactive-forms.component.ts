@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   FormArray,
@@ -8,35 +8,43 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { noSpaceAllow } from './noSpaceAllow.validator';
+import { CustomValidators } from './validators/customValidators';
+import { EmailService } from './validators/services/email.service';
 
 @Component({
   selector: 'app-reactive-forms',
   standalone: true,
-  imports: [ReactiveFormsModule, NgFor],
+  imports: [ReactiveFormsModule, NgClass],
   templateUrl: './reactive-forms.component.html',
   styleUrl: './reactive-forms.component.css',
 })
 export class ReactiveFormsComponent implements OnInit {
-  constructor(private _fromBuilder: FormBuilder) {}
+  constructor(
+    private _fromBuilder: FormBuilder,
+    private _emailService: EmailService
+  ) {}
 
+  useNamePattern = '^[a-zA-Z ]*$';
   registrationForm = this._fromBuilder.group({
     firstName: new FormControl('', [
       Validators.required,
       Validators.minLength(4),
       Validators.maxLength(6),
-      noSpaceAllow,
+      Validators.pattern(this.useNamePattern),
+      CustomValidators.noSpaceAllow,
     ]),
     lastName: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
-      noSpaceAllow,
+      Validators.pattern(this.useNamePattern),
+      CustomValidators.noSpaceAllow,
     ]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    userName: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-    ]),
+    email: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+      asyncValidators: [this._emailService.uniqueEmailValidation()],
+      updateOn: 'blur',
+    }),
+    userName: new FormControl('', [Validators.required]),
     dob: new FormControl('', [Validators.required, Validators.minLength(5)]),
     gender: new FormControl('male', [Validators.required]),
     address: new FormGroup({
@@ -45,8 +53,8 @@ export class ReactiveFormsComponent implements OnInit {
     }),
     skills: new FormArray([
       new FormControl('', Validators.required),
-      new FormControl('', Validators.required),
-      new FormControl('', Validators.required),
+      // new FormControl('', Validators.required),
+      // new FormControl('', Validators.required),
     ]),
     terms: new FormControl('', [Validators.required, Validators.requiredTrue]),
   });
@@ -99,6 +107,45 @@ export class ReactiveFormsComponent implements OnInit {
     }
   }
 
+  disableGnName() {
+    return !(
+      this.registrationForm.get('firstName')?.value &&
+      this.registrationForm.get('lastName')?.value &&
+      this.registrationForm.get('dob')?.value
+    );
+  }
+  gnUsername() {
+    const firstName: string | undefined =
+      this.registrationForm.get('firstName')?.value || '';
+    const lastName: string | undefined =
+      this.registrationForm.get('lastName')?.value || '';
+    const dob: string | undefined =
+      this.registrationForm.get('dob')?.value || '';
+
+    let username = '';
+
+    if (firstName && firstName.length >= 3) {
+      username += firstName.slice(0, 3);
+    } else if (firstName) {
+      username += firstName;
+    }
+
+    if (lastName && lastName.length >= 3) {
+      username += lastName.slice(0, 3);
+    } else if (lastName) {
+      username += lastName;
+    }
+
+    const birthYear = dob ? new Date(dob).getFullYear() : '';
+    username += birthYear;
+
+    username = username.toLowerCase();
+
+    console.log(username);
+
+    this.registrationForm?.get('userName')?.setValue(username);
+  }
+
   addSkills() {
     (<FormArray>this.registrationForm.get('skills')).push(
       new FormControl('', Validators.required)
@@ -110,6 +157,4 @@ export class ReactiveFormsComponent implements OnInit {
       control.removeAt(idx);
     }
   }
-
-  
 }
