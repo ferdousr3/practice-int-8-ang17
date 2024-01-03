@@ -67,5 +67,27 @@ export class SidebarData {
         },
       ],
     },
+    {
+      id: 4,
+      title: 'session six',
+      routes: [
+        {
+          routeTitle: 'Pipes Details',
+          routePath: 'pipe-details',
+        },
+        {
+          routeTitle: 'Pipes',
+          routePath: 'pipes',
+        },
+        {
+          routeTitle:'Observable Concept',
+          routePath:'observable-concept',
+        },
+        {
+          routeTitle:'Observable',
+          routePath:'observable',
+        },
+      ],
+    },
   ];
 }

@@ -11,6 +11,10 @@ import { ViewChildConComponent } from './session-4/view-child-con/view-child-con
 import { FormsTypesComponent } from './session-5/forms-types/forms-types.component';
 import { ReactiveFormsComponent } from './session-5/reactive-forms/reactive-forms.component';
 import { SingleFormComponent } from './session-5/single-form/single-form.component';
+import { ObservableConceptComponent } from './session-6/observable-concept/observable-concept.component';
+import { ObservableComponent } from './session-6/observable/observable.component';
+import { PipeDetailsComponent } from './session-6/pipe-details/pipe-details.component';
+import { PipesComponent } from './session-6/pipes/pipes.component';
 
 const routes: Routes = [
   {
@@ -67,6 +71,26 @@ const routes: Routes = [
     path: 'single-form',
     title: 'Single Form',
     component: SingleFormComponent,
+  },
+  {
+    path: 'pipe-details',
+    title: 'Pipes Details',
+    component: PipeDetailsComponent,
+  },
+  {
+    path: 'pipes',
+    title: 'Pipes',
+    component: PipesComponent,
+  },
+  {
+    path: 'observable-concept',
+    title: 'observable concept',
+    component: ObservableConceptComponent,
+  },
+  {
+    path: 'observable',
+    title: 'observable',
+    component: ObservableComponent,
   },
 ];
 

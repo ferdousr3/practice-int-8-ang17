@@ -1,0 +1,109 @@
+<div class="mt-9">
+  <div class="grid grid-cols-12 gap-4">
+    <div class="col-span-12 p-4 bg-slate-50 text-sm rounded-md border">
+      <h2 class="text-lg font-bold mb-3">
+        What are asynchronous operations and asynchronous data?
+      </h2>
+      <div class="mt-2 mb-4 pr-56">
+        <p class="text-md font-normal mb-2">
+          We already know that JavaScript is a single-threaded language. That
+          means the code is executed line by line and once the execution of one
+          code is complete then only the next code of the program will be
+          executed. When we make a request to the HTTP server that will take
+          more time. So the next statement after the HTTP request has to wait
+          for the execution. It will only get executed when the HTTP request
+          completes. <br />
+          We can say that the synchronized code is blocked in nature. This is
+          the way the asynchronous programs came into the picture. Asynchronous
+          code executing in the background without blocking the execution of the
+          code in the main thread. Asynchronous code is non-blocking. That means
+          we can make HTTP requests asynchronously.
+        </p>
+        <p class="text-md font-normal mb-2">
+          Using an asynchronous program we can perform long network requests
+          without blocking the main thread. There are 2 ways in which we can do
+          that.
+        </p>
+        <div>
+          <ul class="mt-2">
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i> Using Observables
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i> Using Promises
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-6 p-4 bg-slate-50 text-sm rounded-md border">
+      <h2 class="text-lg font-bold mb-3">Promise</h2>
+      <div class="mt-2 mb-4">
+        <ul class="mt-2">
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Helps you run functions asynchronously, and use their return values
+            (or exceptions), but only once when executed.
+          </li>
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Not lazy.
+          </li>
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Not cancellable (there are Promise libraries out there that support
+            cancellation, but ES6 Promise doesn’t so far). The two possible
+            decisions are Reject and Resolve.
+          </li>
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Cannot be retried (Promises should have access to the original
+            function that returned the promise to have a retry capability, which
+            is a bad practice)
+          </li>
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Provided by JavaScript language.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-span-6 p-4 bg-slate-50 text-sm rounded-md border">
+      <h2 class="text-lg font-bold mb-3">Observable</h2>
+      <div class="mt-2 mb-4">
+        <ul class="mt-2">
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Helps you run functions asynchronously, and use their return values
+            in a continuous sequence (multiple times) when executed.
+          </li>
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            By default, it is lazy as it emits values when time progresses.
+          </li>
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Has a lot of operators which simplifies the coding effort.
+          </li>
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            One operator retry can be used to retry whenever needed, also if we
+            need to retry the observable based on some conditions retryWhen can
+            be used.
+          </li>
+
+          <li class="mb-1 flex items-start">
+            <i class="bi bi-check2-circle mr-2"></i>
+            Not a native feature of Angular or JavaScript. Provide by another
+            JavaScript library which is called Rxjs.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-span-8 p-4">
+      <img src={{pipeImage}} alt="">
+    </div>
+  </div>
+
+</div>

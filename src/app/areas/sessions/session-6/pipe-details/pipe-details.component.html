@@ -1,0 +1,86 @@
+<div class="mt-9">
+  <div class="grid grid-cols-12 gap-4">
+    <div class="col-span-12 p-4 bg-slate-50 text-sm rounded-md border">
+      <h2 class="text-lg font-bold mb-3">What are Pipes in Angular?</h2>
+      <div class="mt-2 mb-4">
+        <p class="text-md font-normal mb-2">
+          Pipes are simple functions to use in template expressions to accept an
+          input value and return a transformed value.
+        </p>
+        <p class="text-md font-normal mb-2 mt-2">
+          You can think of them as makeup rooms where they beautify the data
+          into a more desirable format. They do not alter the data but change
+          how they appear to the user
+        </p>
+
+        <div class="">
+          <img src="{{ pipeImage }}" alt="pipe" />
+        </div>
+        <div class="mt-2">
+          <h5 class="text-md font-semibold mb-2">
+            Some commonly used predefined Angular pipes are:
+          </h5>
+          <ul class="mt-2">
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i> DatePipe: Formats a date
+              value.
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i> UpperCasePipe: Transforms text
+              to uppercase.
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i> LowerCasePipe: Transforms text
+              to lowercase.
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i>
+              CurrencyPipe: Transforms a number to the currency string.
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i>
+              PercentPipe: Transforms a number to the percentage string.
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i>
+              DecimalPipe: Transforms a number into a decimal point string.
+            </li>
+          </ul>
+        </div>
+        <div class="mt-2">
+          <h5 class="text-md font-semibold mb-2">Types of pipes</h5>
+          <ul class="mt-2">
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i>
+              Pure Pipes
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i>
+              Impure Pipes
+            </li>
+          </ul>
+        </div>
+        <div class="mt-2">
+          <h5 class="text-md font-semibold mb-2">Pure Pipes</h5>
+          <ul class="mt-2">
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i>
+              A pure pipe is only called when Angular detects a change in the
+              value or the parameters passed to a pipe.
+            </li>
+          </ul>
+        </div>
+        <div class="mt-2">
+          <h5 class="text-md font-semibold mb-2">Impure Pipes</h5>
+          <ul class="mt-2">
+            <li class="mb-1">
+              <i class="bi bi-check2-circle"></i>
+              An impure pipe is called for every change detection cycle no
+              matter whether the value or parameter(s) changes.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
