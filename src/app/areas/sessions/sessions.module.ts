@@ -8,9 +8,10 @@ import { DataBindingComponent } from './session-3/data-binding/data-binding.comp
 import { TwoWayBindingComponent } from './session-3/two-way-binding/two-way-binding.component';
 import { CoursesComponent } from './session-3/inputs/courses/courses.component';
 import { SessionRoutingModule } from './session-routing.module';
+import { ObvsFilterMapComponent } from './session-6/operators/obvs-filter-map/obvs-filter-map.component';
 
 @NgModule({
-  declarations: [SessionsComponent],
+  declarations: [SessionsComponent, ObvsFilterMapComponent],
   imports: [
     CommonModule,
     RouterModule,

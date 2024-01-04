@@ -1,1 +1,50 @@
-<p>pipes works!</p>
+<div class=" bg-slate-50 text-sm rounded-md border mt-24">
+   <h2 class="text-xl mb-4 p-6">Pipes</h2>
+   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+         <tr>
+            <th scope="col" class="px-6 py-3">
+               Product name
+            </th>
+            <th scope="col" class="px-6 py-3">
+               Color
+            </th>
+            <th scope="col" class="px-6 py-3">
+               Category
+            </th>
+            <th scope="col" class="px-6 py-3">
+               Price
+            </th>
+            <th scope="col" class="px-6 py-3">
+               Action
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         @for(product of products; track product.id){
+         <tr class="tr-row">
+            <!-- <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+               @if(product.name.length <= 5){ {{product.name}} } @else { {{product.name.slice(0,5)}} .. } 
+            </th> -->
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+               {{product.name | slices:5}}
+            </th>
+            <td class="px-6 py-4">
+               {{product.color}}
+            </td>
+            <td class="px-6 py-4">
+               {{product.category | uppercase |  slices:5}}
+            </td>
+            <td class="px-6 py-4">
+               {{product.price | currency:'USD':true:'4.2-2' }}
+            </td>
+            <td class="px-6 py-4">
+               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+            </td>
+         </tr>
+         }
+
+
+      </tbody>
+   </table>
+</div>

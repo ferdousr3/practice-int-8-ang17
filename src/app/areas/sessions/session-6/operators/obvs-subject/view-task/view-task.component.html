@@ -1,0 +1,18 @@
+<div class="mt-6">
+   <div class="grid grid-cols-12 gap-4 ">
+      <div class="col-span-12 p-4 bg-slate-50 text-sm rounded-md border text-center ">
+         <h2 class="text-lg font-bold mb-3 max-w-[400px] mx-auto">
+            View Task
+         </h2>
+         <div class="mt-6  max-w-[400px] mx-auto">
+            <ul class="mb-6">
+               @for(item of task ; track item){
+               <li class="bg-indigo-100 text-indigo-700 mb-2 py-1 px-3 ">
+                  {{item}}
+               </li>
+               }
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>

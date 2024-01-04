@@ -80,12 +80,24 @@ export class SidebarData {
           routePath: 'pipes',
         },
         {
-          routeTitle:'Observable Concept',
-          routePath:'observable-concept',
+          routeTitle: 'Observable Concept',
+          routePath: 'observable-concept',
         },
         {
-          routeTitle:'Observable',
-          routePath:'observable',
+          routeTitle: 'Observable',
+          routePath: 'observable',
+        },
+        {
+          routePath: 'observable-of-from',
+          routeTitle: 'observable of and from',
+        },
+        {
+          routePath: 'observable-filter-map',
+          routeTitle: 'observable filter  and map',
+        },
+        {
+          routePath: 'observable-subject',
+          routeTitle: 'observable subject',
         },
       ],
     },

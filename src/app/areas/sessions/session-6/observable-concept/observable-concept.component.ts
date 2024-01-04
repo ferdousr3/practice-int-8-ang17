@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './observable-concept.component.css'
 })
 export class ObservableConceptComponent {
-  pipeImage: string = './assets/images/observable/observable.png';
+  asyncImage: string = './assets/images/observable/observable.png';
+  observableImage: string = './assets/images/observable/observables.png';
 }
