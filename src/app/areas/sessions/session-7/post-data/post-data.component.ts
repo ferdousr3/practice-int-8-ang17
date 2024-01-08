@@ -26,7 +26,7 @@ export class PostDataComponent {
     productCategory: new FormControl('', [Validators.required]),
   });
 
-  url: string = 'https://aninter8-bd319-default-rtdb.firebaseio.c';
+  url: string = 'https://aninter8-bd319-default-rtdb.firebaseio.com';
 
   onSubmit(product: any): void {
     this.http.post(`${this.url}/product.json`, product).subscribe((res) => {
