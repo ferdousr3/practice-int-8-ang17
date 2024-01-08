@@ -12,10 +12,12 @@ import { IProduct } from './productInterface';
 })
 export class GetDataComponent {
   allProducts: IProduct[] = [];
+  isLoading: boolean = false;
   constructor(private http: HttpClient) {}
   url: string =
     'https://aninter8-bd319-default-rtdb.firebaseio.com/product.json';
   getProduct() {
+    this.isLoading = true;
     this.http
       .get<{ [key: string]: IProduct }>(this.url)
       .pipe(
@@ -31,6 +33,7 @@ export class GetDataComponent {
       )
       .subscribe((products) => {
         this.allProducts = products;
+        this.isLoading = !this.isLoading;
       }),
       catchError((err) => {
         return throwError(() => {
