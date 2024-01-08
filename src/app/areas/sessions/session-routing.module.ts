@@ -18,6 +18,8 @@ import { ObvsOfFromComponent } from './session-6/operators/obvs-of-from/obvs-of-
 import { ObvsSubjectComponent } from './session-6/operators/obvs-subject/obvs-subject.component';
 import { PipeDetailsComponent } from './session-6/pipe-details/pipe-details.component';
 import { PipesComponent } from './session-6/pipes/pipes.component';
+import { GetDataComponent } from './session-7/get-data/get-data.component';
+import { PostDataComponent } from './session-7/post-data/post-data.component';
 
 const routes: Routes = [
   {
@@ -109,6 +111,16 @@ const routes: Routes = [
     path: 'observable-subject',
     title: 'observable subject',
     component: ObvsSubjectComponent,
+  },
+  {
+    path: 'http-post',
+    title: 'Post Data',
+    component: PostDataComponent,
+  },
+  {
+    path: 'http-get',
+    title: 'Get Data',
+    component: GetDataComponent,
   },
 ];
 

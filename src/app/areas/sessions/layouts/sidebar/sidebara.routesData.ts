@@ -101,5 +101,20 @@ export class SidebarData {
         },
       ],
     },
+    {
+      id: 5,
+      title: 'session seven',
+      routes: [
+        {
+          routeTitle: 'Post Data',
+          routePath: 'http-post',
+        },
+        {
+          routeTitle: 'Get Data',
+          routePath: 'http-get',
+        },
+       
+      ],
+    },
   ];
 }

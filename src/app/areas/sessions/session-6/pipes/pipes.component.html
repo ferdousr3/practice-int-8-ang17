@@ -27,7 +27,7 @@
                @if(product.name.length <= 5){ {{product.name}} } @else { {{product.name.slice(0,5)}} .. } 
             </th> -->
             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-               {{product.name | slices:5}}
+               {{product.name}}
             </th>
             <td class="px-6 py-4">
                {{product.color}}
