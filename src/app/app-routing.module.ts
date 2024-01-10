@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app.routes';
 import { AdminComponent } from './areas/admin/admin.component';
 import { DeveloperComponent } from './areas/developer/developer.component';
+import { authGuard } from './areas/public/guard/auth.guard';
 import { PublicComponent } from './areas/public/public.component';
 import { PageNotFoundComponent } from './areas/public/views/page-not-found/page-not-found.component';
 import { SessionsComponent } from './areas/sessions/sessions.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
       import('./areas/admin/admin.module').then((m) => m.AdminModule),
   },
   {
+    canActivate: [authGuard],
     path: AppRoutes.Developer,
     component: DeveloperComponent,
     loadChildren: () =>
