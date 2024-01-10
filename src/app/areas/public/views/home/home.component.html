@@ -1,23 +1,31 @@
-@defer ( on viewport) {
+@defer (on viewport) {
 <section>
    <hero />
 </section>
-} @placeholder {
+} @placeholder(minimum 500ms) {
+<user-skeleton />
+} @loading {
 <spinner />
 }
-@defer ( on viewport) {
+
+@defer (when show) {
 <section>
    <feature />
 </section>
 } @placeholder {
+<user-skeleton />
+} @loading {
 <spinner />
 }
-@defer ( on viewport) {
+
+@defer (on timer(4s)) {
 <section>
    <blogs [blogs]="blogs" />
 </section>
 } @placeholder {
+<user-skeleton />
+}@loading {
 <spinner />
-} @error {
+}@error {
 
 }
