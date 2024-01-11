@@ -1,3 +1,4 @@
+@defer( ){
 <div class="mt-9">
   <div class="grid grid-cols-12 gap-4">
     <div class="col-span-6 p-4 bg-slate-50 text-sm rounded-md border">
@@ -5,15 +6,27 @@
       <div class="mt-2 mb-4">
         <h5 class="text-md font-semibold mb-2">Advantage:</h5>
         <ul class="mt-2">
-          <li class="mb-1"><i class="bi bi-check2-circle"></i> Less coding is required in the component class.</li>
-          <li class="mb-1"><i class="bi bi-check2-circle"></i> Easy to understand and stat with.</li>
+          <li class="mb-1">
+            <i class="bi bi-check2-circle"></i> Less coding is required in the
+            component class.
+          </li>
+          <li class="mb-1">
+            <i class="bi bi-check2-circle"></i> Easy to understand and stat
+            with.
+          </li>
         </ul>
       </div>
       <div class="mt-2">
         <h5 class="text-md font-semibold mb-2">Disadvantage:</h5>
         <ul class="mt-2">
-          <li class="mb-1"><i class="bi bi-check2-circle"></i> Difficult to add controls dynamically at runtime.</li>
-          <li class="mb-1"><i class="bi bi-check2-circle"></i> unit testing challenging with TD forms.</li>
+          <li class="mb-1">
+            <i class="bi bi-check2-circle"></i> Difficult to add controls
+            dynamically at runtime.
+          </li>
+          <li class="mb-1">
+            <i class="bi bi-check2-circle"></i> unit testing challenging with TD
+            forms.
+          </li>
         </ul>
       </div>
     </div>
@@ -23,17 +36,24 @@
         <h5 class="text-md font-semibold mb-2">Advantage:</h5>
         <ul class="mt-2">
           <li class="mb-1">
-            <i class="bi bi-check2-circle"></i> Structure of the forms is defined in typeScript class.
+            <i class="bi bi-check2-circle"></i> Structure of the forms is
+            defined in typeScript class.
           </li>
-          <li class="mb-1"><i class="bi bi-check2-circle"></i> Creating dynamic controls is easier.</li>
-          <li class="mb-1"><i class="bi bi-check2-circle"></i> Easy to unit test.</li>
+          <li class="mb-1">
+            <i class="bi bi-check2-circle"></i> Creating dynamic controls is
+            easier.
+          </li>
+          <li class="mb-1">
+            <i class="bi bi-check2-circle"></i> Easy to unit test.
+          </li>
         </ul>
       </div>
       <div class="mt-2">
         <h5 class="text-md font-semibold mb-2">Disadvantage:</h5>
         <ul class="mt-2">
           <li class="mb-1">
-            <i class="bi bi-check2-circle"></i> Most of things are done by writing code.
+            <i class="bi bi-check2-circle"></i> Most of things are done by
+            writing code.
           </li>
         </ul>
       </div>
@@ -43,11 +63,14 @@
       <h2 class="text-lg font-bold mb-3">What is form array?</h2>
       <div class="mt-2 mb-4">
         <p class="text-md font-normal mb-2">
-          A FromArray is a way to manage a collection of form control in angular. The form control can be a
-          formGroup,FormControl, or another FormArray
+          A FromArray is a way to manage a collection of form control in
+          angular. The form control can be a formGroup,FormControl, or another
+          FormArray
         </p>
         <div class="mt-2">
-          <h5 class="text-md font-semibold mb-2">In Angular we can group form control two ways</h5>
+          <h5 class="text-md font-semibold mb-2">
+            In Angular we can group form control two ways
+          </h5>
           <ul class="mt-2">
             <li class="mb-1">
               <i class="bi bi-check2-circle"></i>
@@ -63,12 +86,52 @@
           <h5 class="text-md font-semibold mb-2">Difference between</h5>
           <ul class="mt-2">
             <li class="mb-1">
-              <i class="bi bi-check2-circle"></i> FormGroup stores the form controls in the form of key values pair in an object
+              <i class="bi bi-check2-circle"></i> FormGroup stores the form
+              controls in the form of key values pair in an object
             </li>
             <li class="mb-1">
-              <i class="bi bi-check2-circle"></i> FormGroup stores the form controls as an element of an array
+              <i class="bi bi-check2-circle"></i> FormGroup stores the form
+              controls as an element of an array
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+</div>
+} @placeholder(minimum 600ms){
+<div role="status" class="space-y-2.5 animate-pulse max-w-lg">
+  <div class="flex items-center w-full">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+  </div>
+  <div class="flex items-center w-full max-w-[480px]">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+  </div>
+  <div class="flex items-center w-full max-w-[400px]">
+    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+    <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+  </div>
+  <div class="flex items-center w-full max-w-[480px]">
+    <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+  </div>
+  <div class="flex items-center w-full max-w-[440px]">
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-32"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+    <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+  </div>
+  <div class="flex items-center w-full max-w-[360px]">
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+    <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
+    <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+  </div>
+  <span class="sr-only">Loading...</span>
+</div>
+
+}

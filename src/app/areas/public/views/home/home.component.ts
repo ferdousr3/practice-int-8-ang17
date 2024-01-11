@@ -5,6 +5,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { FeatureComponent } from './feature/feature.component';
 import { HeroComponent } from './hero/hero.component';
 import { HomeData, IBlog } from './home.data';
+import { HereSkeletonComponent } from './hero/here-skeleton.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { HomeData, IBlog } from './home.data';
     HeroComponent,
     SpinnerComponent,
     UserSkeletonComponent,
+    HereSkeletonComponent
   ],
   templateUrl: './home.component.html',
 })

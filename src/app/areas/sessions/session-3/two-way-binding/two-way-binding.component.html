@@ -1,3 +1,4 @@
+@defer(on viewport){
 <div class="mt-24 mb-16 max-w-[300px] mx-auto h-72">
    <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
       YourEmail
@@ -21,7 +22,7 @@
       <p>{{inputData}}</p>
    </div>
    <div class="mt-16">
-      <div  class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto">
          <label for="website-admin"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
          <div class="flex">
@@ -33,13 +34,10 @@
                      d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
                </svg>
             </span>
-            <input type="text" id="website-admin"
-            [(ngModel)]="nameText"
-               class="rounded-none rounded-e-lg bg-gray-50 border
-                border-gray-300 text-gray-900 focus:ring-blue-500
-                 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5 
-                  "
-               placeholder="Bonnie Green">
+            <input type="text" id="website-admin" [(ngModel)]="nameText" class="rounded-none rounded-e-lg bg-gray-50 border
+                   border-gray-300 text-gray-900 focus:ring-blue-500
+                    focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5 
+                     " placeholder="Bonnie Green">
          </div>
          <div class="mt-4">
             <p>{{nameText}}</p>
@@ -48,3 +46,40 @@
 
    </div>
 </div>
+
+}@placeholder(minimum 600ms) {
+<div role="status" class="space-y-2.5 animate-pulse max-w-lg">
+   <div class="flex items-center w-full">
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+   </div>
+   <div class="flex items-center w-full max-w-[480px]">
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+   </div>
+   <div class="flex items-center w-full max-w-[400px]">
+      <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+      <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+   </div>
+   <div class="flex items-center w-full max-w-[480px]">
+      <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+   </div>
+   <div class="flex items-center w-full max-w-[440px]">
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-32"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+      <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+   </div>
+   <div class="flex items-center w-full max-w-[360px]">
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+      <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
+      <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+   </div>
+   <span class="sr-only">Loading...</span>
+</div>
+
+}

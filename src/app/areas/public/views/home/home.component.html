@@ -3,26 +3,19 @@
    <hero />
 </section>
 } @placeholder(minimum 500ms) {
-<user-skeleton />
+<here-skeleton />
 } @loading {
 <spinner />
 }
-
-@defer (when show) {
 <section>
    <feature />
 </section>
-} @placeholder {
-<user-skeleton />
-} @loading {
-<spinner />
-}
 
-@defer (on timer(4s)) {
+@defer (on viewport) {
 <section>
    <blogs [blogs]="blogs" />
 </section>
-} @placeholder {
+} @placeholder(minimum 700ms) {
 <user-skeleton />
 }@loading {
 <spinner />
