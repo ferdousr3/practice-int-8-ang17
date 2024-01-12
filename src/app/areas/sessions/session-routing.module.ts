@@ -23,27 +23,11 @@ import { PostDataComponent } from './session-7/post-data/post-data.component';
 
 const routes: Routes = [
   {
-    path:''
-  }
-  {
-    path: '',
-    redirectTo: PublicRoutes.oneWayBindRoute.path,
-    pathMatch: 'full',
-  },
-  {
-    path: PublicRoutes.oneWayBindRoute.path,
-    title: PublicRoutes.oneWayBindRoute.title,
-    component: DataBindingComponent,
-  },
-  {
-    path: PublicRoutes.twoWayBindRoute.path,
-    title: PublicRoutes.twoWayBindRoute.title,
-    component: TwoWayBindingComponent,
-  },
-  {
-    path: PublicRoutes.courseCardRoute.path,
-    title: PublicRoutes.courseCardRoute.title,
-    component: CoursesComponent,
+    path: 'session-three',
+    loadChildren: () =>
+      import('./session-3/session-three.module').then(
+        (m) => m.SessionThreeModule
+      ),
   },
   {
     path: 'template-ref-va',

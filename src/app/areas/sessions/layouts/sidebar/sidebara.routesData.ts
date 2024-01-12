@@ -15,15 +15,15 @@ export class SidebarData {
       routes: [
         {
           routeTitle: 'Data Binding',
-          routePath: 'one-way-bind',
+          routePath: 'session-three',
         },
         {
           routeTitle: 'Two Way bind',
-          routePath: 'Two-way-bind',
+          routePath: 'session-three/Two-way-bind',
         },
         {
           routeTitle: 'Card',
-          routePath: 'course-card',
+          routePath: 'session-three/course-card',
         },
       ],
     },
