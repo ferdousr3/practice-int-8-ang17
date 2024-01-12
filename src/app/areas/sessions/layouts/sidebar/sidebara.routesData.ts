@@ -55,15 +55,15 @@ export class SidebarData {
       routes: [
         {
           routeTitle: 'Forms types',
-          routePath: 'forms-types',
+          routePath: 'sessionFive/forms-types',
         },
         {
           routeTitle: 'Reactive Forms',
-          routePath: 'reactive-forms',
+          routePath: 'sessionFive/reactive-forms',
         },
         {
           routeTitle: 'Single Form',
-          routePath: 'single-form',
+          routePath: 'sessionFive/single-form',
         },
       ],
     },
@@ -73,30 +73,30 @@ export class SidebarData {
       routes: [
         {
           routeTitle: 'Pipes Details',
-          routePath: 'pipe-details',
+          routePath: 'sessionSix/pipe-details',
         },
         {
           routeTitle: 'Pipes',
-          routePath: 'pipes',
+          routePath: 'sessionSix/pipes',
         },
         {
           routeTitle: 'Observable Concept',
-          routePath: 'observable-concept',
+          routePath: 'sessionSix/observable-concept',
         },
         {
           routeTitle: 'Observable',
-          routePath: 'observable',
+          routePath: 'sessionSix/observable',
         },
         {
-          routePath: 'observable-of-from',
+          routePath: 'sessionSix/observable-of-from',
           routeTitle: 'observable of and from',
         },
         {
-          routePath: 'observable-filter-map',
+          routePath: 'sessionSix/observable-filter-map',
           routeTitle: 'observable filter  and map',
         },
         {
-          routePath: 'observable-subject',
+          routePath: 'sessionSix/observable-subject',
           routeTitle: 'observable subject',
         },
       ],

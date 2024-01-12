@@ -15,7 +15,9 @@ export class CreateTaskComponent {
 
   createNewTsk() {
     
-    this.taskService.onCreateTask(this.newTask);
+    if(this.newTask !==''){
+      this.taskService.onCreateTask(this.newTask);
+    }
     console.log(this.newTask);
   }
 }

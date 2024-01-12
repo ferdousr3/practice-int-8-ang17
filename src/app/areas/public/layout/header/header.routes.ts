@@ -13,7 +13,7 @@ export class HeaderRoutes {
     },
     {
       title: AppRoutes.Sessions,
-      path: AppRoutes.Sessions,
+      path: 'sessions/session-three/one-way-bind',
     },
   ];
 }
