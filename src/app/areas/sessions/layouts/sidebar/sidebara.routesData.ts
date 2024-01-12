@@ -15,7 +15,7 @@ export class SidebarData {
       routes: [
         {
           routeTitle: 'Data Binding',
-          routePath: 'session-three',
+          routePath: 'session-three/one-way-bind',
         },
         {
           routeTitle: 'Two Way bind',
