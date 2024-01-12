@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OfferHeaderComponent } from '../../../../shared/component/offer-header/offer-header.component';
+import { OfferHeaderComponent } from '../../../../shared/components/offer-header/offer-header.component';
 import { MonthlyCourseComponent } from './monthly-course/monthly-course.component';
 import { OfferCourseComponent } from './offer-course/offer-course.component';
 

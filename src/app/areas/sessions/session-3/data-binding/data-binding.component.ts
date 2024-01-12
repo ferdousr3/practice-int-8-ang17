@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ICourse, SessionThreeData } from '../sessionThreeData';
 import { CourseCardComponent } from '../inputs/course-card/course-card.component';
-import { PageSectionTitleComponent } from '../../../../shared/component/page-section-title/page-section-title.component';
+import { PageSectionTitleComponent } from '../../../../shared/components/page-section-title/page-section-title.component';
 
 @Component({
   selector: 'app-data-binding',

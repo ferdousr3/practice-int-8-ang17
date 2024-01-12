@@ -23,6 +23,9 @@ import { PostDataComponent } from './session-7/post-data/post-data.component';
 
 const routes: Routes = [
   {
+    path:''
+  }
+  {
     path: '',
     redirectTo: PublicRoutes.oneWayBindRoute.path,
     pathMatch: 'full',
