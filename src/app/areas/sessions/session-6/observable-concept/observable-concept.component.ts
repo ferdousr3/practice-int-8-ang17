@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { OptimizeImg } from '../../../../shared/components/image/image.component';
 
 @Component({
   selector: 'app-observable-concept',
   standalone: true,
-  imports: [],
+  imports: [OptimizeImg],
   templateUrl: './observable-concept.component.html',
   styleUrl: './observable-concept.component.css'
 })
