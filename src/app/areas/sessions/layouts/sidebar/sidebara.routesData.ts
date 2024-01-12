@@ -33,18 +33,18 @@ export class SidebarData {
       routes: [
         {
           routeTitle: 'Template-Ref-Var',
-          routePath: 'template-ref-va',
+          routePath: 'sessionFour/template-ref-va',
         },
         {
           routeTitle: 'view child & children',
-          routePath: 'view-child-children',
+          routePath: 'sessionFour/view-child-children',
         },
         {
           routeTitle: 'Services',
-          routePath: 'all-services',
+          routePath: 'sessionFour/all-services',
         },
         {
-          routePath: 'css',
+          routePath: 'sessionFour/css',
           routeTitle: 'css',
         },
       ],
