@@ -3,6 +3,7 @@ import { filter, from, map } from 'rxjs';
 
 @Component({
   selector: 'app-obvs-filter-map',
+  standalone:true,
   templateUrl: './obvs-filter-map.component.html',
   styleUrl: './obvs-filter-map.component.css',
 })

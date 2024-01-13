@@ -11,7 +11,7 @@ import { SessionRoutingModule } from './session-routing.module';
 import { ObvsFilterMapComponent } from './session-6/operators/obvs-filter-map/obvs-filter-map.component';
 
 @NgModule({
-  declarations: [SessionsComponent, ObvsFilterMapComponent],
+  declarations: [SessionsComponent],
   imports: [
     CommonModule,
     RouterModule,

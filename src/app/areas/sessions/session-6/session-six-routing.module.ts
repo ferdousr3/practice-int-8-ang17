@@ -39,17 +39,17 @@ const routes: Routes = [
   {
     path: 'observable-of-from',
     title: 'observable of and from',
-    component: ObvsOfFromComponent,
+    loadComponent:()=> import('./operators/obvs-of-from/obvs-of-from.component').then(m=>m.ObvsOfFromComponent)
   },
   {
     path: 'observable-filter-map',
     title: 'observable filter  and map',
-    component: ObvsFilterMapComponent,
+    loadComponent:()=> import('./operators/obvs-filter-map/obvs-filter-map.component').then(m=>m.ObvsFilterMapComponent)
   },
   {
     path: 'observable-subject',
     title: 'observable subject',
-    component: ObvsSubjectComponent,
+    loadComponent:()=> import('./operators/obvs-subject/obvs-subject.component').then(m=>m.ObvsSubjectComponent)
   },
 ];
 
