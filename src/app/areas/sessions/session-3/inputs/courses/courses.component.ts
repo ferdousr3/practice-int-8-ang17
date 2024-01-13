@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SectionTitleComponent } from '../../section-title/section-title.component';
 import { ICourse, SessionThreeData } from '../../sessionThreeData';
 import { CourseCardComponent } from '../course-card/course-card.component';
@@ -9,6 +9,8 @@ import { CourseCardComponent } from '../course-card/course-card.component';
   imports: [CourseCardComponent, SectionTitleComponent],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class CoursesComponent {
   public allCourses: ICourse[] = SessionThreeData.courses.slice(0, 3);

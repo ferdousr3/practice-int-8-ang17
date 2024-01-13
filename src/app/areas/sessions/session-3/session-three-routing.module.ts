@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PublicRoutes } from '../../public/public.routes';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
-import { CoursesComponent } from './inputs/courses/courses.component';
 
 const routes: Routes = [
   {
@@ -14,22 +11,31 @@ const routes: Routes = [
   {
     path: PublicRoutes.oneWayBindRoute.path,
     title: PublicRoutes.oneWayBindRoute.title,
-    component: DataBindingComponent,
+    loadComponent: () =>
+      import('./data-binding/data-binding.component').then(
+        (m) => m.DataBindingComponent
+      ),
   },
   {
     path: PublicRoutes.twoWayBindRoute.path,
     title: PublicRoutes.twoWayBindRoute.title,
-    component: TwoWayBindingComponent,
+    loadComponent: () =>
+      import('./two-way-binding/two-way-binding.component').then(
+        (m) => m.TwoWayBindingComponent
+      ),
   },
   {
     path: PublicRoutes.courseCardRoute.path,
     title: PublicRoutes.courseCardRoute.title,
-    component: CoursesComponent,
+    loadComponent: () =>
+      import('./inputs/courses/courses.component').then(
+        (m) => m.CoursesComponent
+      ),
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class SessionThreeRoutingModule { }
+export class SessionThreeRoutingModule {}

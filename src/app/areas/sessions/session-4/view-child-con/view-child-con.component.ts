@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-view-child-con',
@@ -6,6 +6,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   imports: [],
   templateUrl: './view-child-con.component.html',
   styleUrl: './view-child-con.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class ViewChildConComponent implements OnInit, AfterViewInit {
   newEmailId: string = '';

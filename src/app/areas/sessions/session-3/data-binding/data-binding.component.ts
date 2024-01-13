@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ICourse, SessionThreeData } from '../sessionThreeData';
 import { CourseCardComponent } from '../inputs/course-card/course-card.component';
 import { PageSectionTitleComponent } from '../../../../shared/components/page-section-title/page-section-title.component';
@@ -9,6 +9,8 @@ import { PageSectionTitleComponent } from '../../../../shared/components/page-se
   imports: [CourseCardComponent,PageSectionTitleComponent],
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class DataBindingComponent {
   public courses: ICourse[] = SessionThreeData.courses;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-template-ref-va',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './template-ref-va.component.html',
   styleUrl: './template-ref-va.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class TemplateRefVaComponent {
   newEmail: string = '';

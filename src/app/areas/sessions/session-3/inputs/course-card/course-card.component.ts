@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import {  OptimizeImg } from '../../../../../shared/components/image/image.component';
 import { ICourse } from '../../sessionThreeData';
 
@@ -8,6 +8,8 @@ import { ICourse } from '../../sessionThreeData';
   imports: [OptimizeImg],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class CourseCardComponent {
   @Input() allCourses: ICourse[] = [];

@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { Router, RouterModule } from '@angular/router';
   imports: [RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class SessionHeaderComponent {
   // constructor(private router: Router) {}

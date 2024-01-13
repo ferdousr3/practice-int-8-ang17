@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'section-title',
@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   imports: [],
   templateUrl: './section-title.component.html',
   styleUrl: './section-title.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class SectionTitleComponent {
   @Input()

@@ -1,5 +1,5 @@
 import { NgClass, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ISidebarRoute, SidebarData } from './sidebara.routesData';
 
@@ -9,6 +9,8 @@ import { ISidebarRoute, SidebarData } from './sidebara.routesData';
   imports: [RouterLink, NgClass, RouterLinkActive],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class SessionSidebarComponent {
   public sidebarRoutes: ISidebarRoute[] = SidebarData.SidebarRoutes;

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SubscribeService } from '../../../../../shared/services/subscribe.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { SubscribeService } from '../../../../../shared/services/subscribe.servi
   imports: [],
   templateUrl: './monthly-course.component.html',
   styleUrl: './monthly-course.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class MonthlyCourseComponent {
   private monthlySubscribe = inject(SubscribeService);
