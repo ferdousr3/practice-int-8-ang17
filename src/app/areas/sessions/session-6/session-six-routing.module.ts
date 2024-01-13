@@ -5,8 +5,6 @@ import { ObservableComponent } from './observable/observable.component';
 import { ObvsFilterMapComponent } from './operators/obvs-filter-map/obvs-filter-map.component';
 import { ObvsOfFromComponent } from './operators/obvs-of-from/obvs-of-from.component';
 import { ObvsSubjectComponent } from './operators/obvs-subject/obvs-subject.component';
-import { PipeDetailsComponent } from './pipe-details/pipe-details.component';
-import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Routes = [
   {
@@ -17,22 +15,26 @@ const routes: Routes = [
   {
     path: 'pipe-details',
     title: 'Pipes Details',
-    component: PipeDetailsComponent,
+    loadComponent: () =>
+      import('./pipe-details/pipe-details.component').then(
+        (m) => m.PipeDetailsComponent
+      ),
   },
   {
     path: 'pipes',
     title: 'Pipes',
-    component: PipesComponent,
+    loadComponent: () =>
+      import('./pipes/pipes.component').then((m) => m.PipesComponent),
   },
   {
     path: 'observable-concept',
     title: 'observable concept',
-    component: ObservableConceptComponent,
+    loadComponent:()=> import('./observable-concept/observable-concept.component').then(m=>m.ObservableConceptComponent)
   },
   {
     path: 'observable',
     title: 'observable',
-    component: ObservableComponent,
+    loadComponent:()=> import('./observable/observable.component').then(m=>m.ObservableComponent)
   },
   {
     path: 'observable-of-from',

@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GetDataComponent } from './session-7/get-data/get-data.component';
-import { PostDataComponent } from './session-7/post-data/post-data.component';
 
 const routes: Routes = [
   {
@@ -38,12 +36,18 @@ const routes: Routes = [
   {
     path: 'http-post',
     title: 'Post Data',
-    component: PostDataComponent,
+    loadComponent: () =>
+      import('./session-7/post-data/post-data.component').then(
+        (m) => m.PostDataComponent
+      ),
   },
   {
     path: 'http-get',
     title: 'Get Data',
-    component: GetDataComponent,
+    loadComponent: () =>
+      import('./session-7/get-data/get-data.component').then(
+        (m) => m.GetDataComponent
+      ),
   },
 ];
 

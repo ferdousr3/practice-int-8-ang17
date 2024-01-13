@@ -15,7 +15,7 @@ export class GetDataComponent {
   isLoading: boolean = false;
   constructor(private http: HttpClient) {}
   url: string =
-    'https://aninter8-bd319-default-rtdb.firebaseio.com/product.jsonf';
+    'https://aninter8-bd319-default-rtdb.firebaseio.com/product.json';
   getProduct() {
     this.isLoading = true;
     this.http
@@ -41,12 +41,7 @@ export class GetDataComponent {
       //     this.allProducts = products;
       //     this.isLoading = !this.isLoading;
       //   });
-      // // catchError((err) => {
-      // //   return throwError(() => {
-      // //     console.log(err.statusText);
-      // //     return err.status;
-      // //   });
-      // // });
+    
       .pipe(
         map((res) => {
           const products = [];
