@@ -1,0 +1,30 @@
+.demo-table {
+  margin: auto;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.demo-table__row {
+  display: flex;
+  flex-direction: row;
+}
+.demo-table__column {
+  flex-grow: 1;
+  padding: 40px 0px;
+}
+.demo-table__column--dark {
+  background-color: black;
+}
+.icon {
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: relative;
+}
+
+.canvas {
+  border: 1px dashed black;
+  width: 200px;
+  height: 150px;
+  cursor: crosshair;
+}

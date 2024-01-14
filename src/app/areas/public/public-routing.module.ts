@@ -8,12 +8,17 @@ const routes: Routes = [
   {
     path: PublicRoutes.homeRoute.path,
     title: PublicRoutes.homeRoute.title,
-    component: HomeComponent,
+    loadComponent: () => import('./views/home/home.component').then(m => m.HomeComponent)
   },
   {
     path: PublicRoutes.contactRoute.path,
     title: PublicRoutes.contactRoute.title,
-    component: ContactComponent,
+    loadComponent: () => import('./views/contact/contact.component').then(m => m.ContactComponent)
+  },
+  {
+    path: 'tooltip',
+    title: 'tooltip',
+    loadComponent: () => import('./views/tool-tip-design/tool-tip-design.component').then(m => m.ToolTipDesignComponent)
   },
 ];
 
@@ -21,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PublicRoutingModule {}
+export class PublicRoutingModule { }

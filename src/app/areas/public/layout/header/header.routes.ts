@@ -15,5 +15,13 @@ export class HeaderRoutes {
       title: AppRoutes.Sessions,
       path: 'sessions/session-three/one-way-bind',
     },
+    {
+      title:'Tooltip',
+      path:'tooltip'
+    },
+    {
+      title:'Contact',
+      path:'contact'
+    }
   ];
 }

@@ -1,10 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-page-not-found',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './page-not-found.component.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class PageNotFoundComponent {}
+export class PageNotFoundComponent { }
